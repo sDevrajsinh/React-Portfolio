@@ -44,25 +44,25 @@ const About = () => {
                 <div className="about-text">
                     <h3>My Journey & Passion</h3>
                     <p>
-                        I am a dedicated **Full Stack Developer** in the making, currently based in Vadod, Anand. 
-                        My academic background at MB Patel College, combined with intensive technical training at 
+                        I am a dedicated **Full Stack Developer** in the making, currently based in Vadod, Anand.
+                        My academic background at MB Patel College, combined with intensive technical training at
                         **Red & White Multimedia Education**, has shaped my disciplined approach to problem-solving.
                     </p>
                     <p>
-                        What started as a fascination with web layouts has evolved into a career mission. 
-                        I have mastered the art of building responsive, user-centric frontends and am now 
-                        deeply immersed in mastering the MERN stack (**Node.js, Express, and MongoDB**) 
+                        What started as a fascination with web layouts has evolved into a career mission.
+                        I have mastered the art of building responsive, user-centric frontends and am now
+                        deeply immersed in mastering the MERN stack (**Node.js, Express, and MongoDB**)
                         to build robust, end-to-end applications.
                     </p>
                     <p>
-                        I believe in the power of continuous learning. Each project I undertake is an opportunity 
-                        to refine my architecture choices, improve code readability, and deliver exceptional 
+                        I believe in the power of continuous learning. Each project I undertake is an opportunity
+                        to refine my architecture choices, improve code readability, and deliver exceptional
                         user experiences.
                     </p>
-                    
+
                     <div className="about-cta">
                         <a
-                            href="https://drive.google.com/file/d/1iI0vQaeZtl3-SA4YWqsr3Um-9vRyRPzF/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1mHGBi9JIEqNIgLPf0Q5jpAi6AJKLl11L/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn btn-primary"
