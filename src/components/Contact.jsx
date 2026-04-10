@@ -74,20 +74,20 @@ const Contact = () => {
                     </div>
                     <div className="contact-item">
                         <div className="contact-icon">
-                            <i className="fas fa-envelope"></i>
+                            <i class="fa-regular fa-address-book"></i>
                         </div>
                         <div>
                             <h4>Contect</h4>
-                            <p>[+91 926 534 4331]</p>
+                            <p>+91 926 534 4331</p>
                         </div>
                     </div>
                     <div className="contact-item">
                         <div className="contact-icon">
-                            <i className="fas fa-graduation-cap"></i>
+                            <i className="fas fa-envelope"></i>
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <p>[sdevraj2122@gmail.com]</p>
+                            <p>sdevraj2122@gmail.com</p>
                             {/* <h4>Full Stack Developer</h4>
                             <p>Red and White Group of Institutes</p> */}
                         </div>
@@ -148,9 +148,9 @@ const Contact = () => {
                             ></textarea>
                         </div>
                         {status && (
-                            <div className="status-message" style={{ 
-                                color: status.includes('successfully') ? 'var(--accent-primary)' : '#ff4d4d', 
-                                marginBottom: '1rem', 
+                            <div className="status-message" style={{
+                                color: status.includes('successfully') ? 'var(--accent-primary)' : '#ff4d4d',
+                                marginBottom: '1rem',
                                 textAlign: 'center',
                                 fontWeight: '600',
                                 animation: 'fadeIn 0.3s ease'
