@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import htmlImg from '../img/HTML coverPage.png'
 import travelimg from '../img/TravelCove.png'
 import cssImg from '../img/css coverPage.png'
 import bootstrapImg from '../img/Bootstrap coverPage.png'
