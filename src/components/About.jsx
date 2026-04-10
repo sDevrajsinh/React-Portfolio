@@ -60,16 +60,25 @@ const About = () => {
                         user experiences.
                     </p>
 
-                    <div className="about-cta">
-                        <a
-                            href="https://drive.google.com/file/d/1mHGBi9JIEqNIgLPf0Q5jpAi6AJKLl11L/view?usp=sharing"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-primary"
-                        >
-                            <i className="fas fa-file-download"></i>
-                            Download My Resume
-                        </a>
+                    <div className="experience-highlights">
+                        <div className="experience-item">
+                            <div className="exp-icon">
+                                <i className="fas fa-graduation-cap"></i>
+                            </div>
+                            <div className="exp-info">
+                                <h4>Red & White Multimedia Education</h4>
+                                <p>Full Stack Web Development Trainee</p>
+                            </div>
+                        </div>
+                        <div className="experience-item">
+                            <div className="exp-icon">
+                                <i className="fas fa-university"></i>
+                            </div>
+                            <div className="exp-info">
+                                <h4>MB Patel College</h4>
+                                <p>Academic Foundation & Problem Solving</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

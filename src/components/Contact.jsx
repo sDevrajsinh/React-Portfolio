@@ -7,6 +7,7 @@ import React, { useState } from 'react';
  * - Form submission handling
  */
 const Contact = () => {
+    const [status, setStatus] = useState('');
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -29,12 +30,12 @@ const Contact = () => {
 
         // Validation
         if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-            alert('Please fill in all fields');
+            setStatus('Please fill in all fields');
             return;
         }
 
-        // Success message
-        alert('Thank you for your message! I will get back to you soon.');
+        // Success logic
+        setStatus('Message sent successfully ✅');
 
         // Reset form
         setFormData({
@@ -43,6 +44,11 @@ const Contact = () => {
             subject: '',
             message: ''
         });
+
+        // Hide status after 3 seconds
+        setTimeout(() => {
+            setStatus('');
+        }, 3000);
     };
 
     return (
@@ -71,8 +77,8 @@ const Contact = () => {
                             <i className="fas fa-envelope"></i>
                         </div>
                         <div>
-                            <h4>Email</h4>
-                            <p>[EMAIL_ADDRESS]</p>
+                            <h4>Contect</h4>
+                            <p>[+91 926 534 4331]</p>
                         </div>
                     </div>
                     <div className="contact-item">
@@ -80,8 +86,10 @@ const Contact = () => {
                             <i className="fas fa-graduation-cap"></i>
                         </div>
                         <div>
-                            <h4>Full Stack Developer</h4>
-                            <p>Red and White Group of Institutes</p>
+                            <h4>Email</h4>
+                            <p>[sdevraj2122@gmail.com]</p>
+                            {/* <h4>Full Stack Developer</h4>
+                            <p>Red and White Group of Institutes</p> */}
                         </div>
                     </div>
                     <div className="contact-item">
@@ -139,6 +147,17 @@ const Contact = () => {
                                 required
                             ></textarea>
                         </div>
+                        {status && (
+                            <div className="status-message" style={{ 
+                                color: status.includes('successfully') ? 'var(--accent-primary)' : '#ff4d4d', 
+                                marginBottom: '1rem', 
+                                textAlign: 'center',
+                                fontWeight: '600',
+                                animation: 'fadeIn 0.3s ease'
+                            }}>
+                                {status}
+                            </div>
+                        )}
                         <button type="submit" className="btn btn-primary">
                             <i className="fas fa-paper-plane"></i>
                             Send Message

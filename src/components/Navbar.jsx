@@ -48,6 +48,17 @@ const Navbar = () => {
                         <li><a href="#about" onClick={handleLinkClick}>About</a></li>
                         <li><a href="#services" onClick={handleLinkClick}>Services</a></li>
                         <li><a href="#portfolio-projects" onClick={handleLinkClick}>Projects</a></li>
+                        <li>
+                            <a 
+                                href="https://drive.google.com/file/d/1mHGBi9JIEqNIgLPf0Q5jpAi6AJKLl11L/view?usp=sharing" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                onClick={handleLinkClick}
+                                className="nav-resume-link"
+                            >
+                                Resume
+                            </a>
+                        </li>
                         <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
                     </ul>
                     <div
