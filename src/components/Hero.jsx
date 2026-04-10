@@ -52,17 +52,17 @@ const Hero = () => {
                 <h1>Devraj Solanki</h1>
                 <p className="hero-subtitle">I'm a <span className="highlight">{displayText}</span><span className="cursor">|</span></p>
                 <p className="hero-description">
-                    "Passionate about building seamless digital experiences. I specialize in crafting high-performance, responsive frontend applications and am currently expanding my expertise into Full Stack development with the MERN stack. My goal is to build scalable web solutions that solve real-world problems."
+                    "I am Devraj Solanki, a passionate Full Stack Web Developer currently learning at Red & White Skill Education. I have hands-on experience in both frontend and backend technologies. I enjoy building responsive, user-friendly, and scalable web applications. I am always eager to learn new technologies and improve my development skills."
                 </p>
                 <div className="cta-buttons">
                     <a href="#portfolio-projects" className="btn btn-primary">
                         <i className="fas fa-rocket"></i>
                         Explore Projects
                     </a>
-                    <a 
-                        href="https://drive.google.com/file/d/1iI0vQaeZtl3-SA4YWqsr3Um-9vRyRPzF/view?usp=sharing" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                    <a
+                        href="https://drive.google.com/file/d/1mHGBi9JIEqNIgLPf0Q5jpAi6AJKLl11L/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn btn-secondary"
                     >
                         <i className="fas fa-file-download"></i>

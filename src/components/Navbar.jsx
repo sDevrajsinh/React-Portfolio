@@ -39,26 +39,33 @@ const Navbar = () => {
     };
 
     return (
-        <nav id="navbar" style={{ background: navBackground }}>
-            <div className="nav-container">
-                <a href="#home" className="logo">DevSolanki</a>
-                <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
-                    <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
-                    <li><a href="#about" onClick={handleLinkClick}>About</a></li>
-                    <li><a href="#services" onClick={handleLinkClick}>Services</a></li>
-                    <li><a href="#portfolio-projects" onClick={handleLinkClick}>Projects</a></li>
-                    <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
-                </ul>
-                <div
-                    className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}
-                    onClick={toggleMobileMenu}
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <>
+            <nav id="navbar" style={{ background: navBackground }}>
+                <div className="nav-container">
+                    <a href="#home" className="logo">DevSolanki</a>
+                    <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+                        <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
+                        <li><a href="#about" onClick={handleLinkClick}>About</a></li>
+                        <li><a href="#services" onClick={handleLinkClick}>Services</a></li>
+                        <li><a href="#portfolio-projects" onClick={handleLinkClick}>Projects</a></li>
+                        <li><a href="#contact" onClick={handleLinkClick}>Contact</a></li>
+                    </ul>
+                    <div
+                        className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}
+                        onClick={toggleMobileMenu}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            {/* Overlay for mobile menu */}
+            <div 
+                className={`nav-overlay ${isMobileMenuOpen ? 'active' : ''}`} 
+                onClick={handleLinkClick}
+            ></div>
+        </>
     );
 };
 
