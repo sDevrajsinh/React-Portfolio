@@ -1,0 +1,77 @@
+import React, { useState, useEffect } from 'react';
+
+/**
+ * Hero Component
+ * Converts the original hero section with:
+ * - Typing animation using useState and useEffect
+ * - Multi-phrase rotation effect
+ */
+
+// Phrases array for the typing animation
+const phrases = [
+    'Full Stack Web Developer',
+    'MERN Stack Enthusiast',
+    'Frontend Specialist',
+    'Backend Learner',
+    'Problem Solver'
+];
+
+const Hero = () => {
+    const [displayText, setDisplayText] = useState('');
+    const [phraseIndex, setPhraseIndex] = useState(0);
+    const [charIndex, setCharIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+
+    // Typing animation logic
+    useEffect(() => {
+        const currentPhrase = phrases[phraseIndex];
+        let typingSpeed = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            typingSpeed = 2000; // Pause at the end
+            setIsDeleting(true);
+        } else if (isDeleting && charIndex === 0) {
+            setIsDeleting(false);
+            setPhraseIndex((phraseIndex + 1) % phrases.length);
+            typingSpeed = 500;
+        }
+
+        const typeTimeout = setTimeout(() => {
+            setCharIndex(prev => prev + (isDeleting ? -1 : 1));
+        }, typingSpeed);
+
+        setDisplayText(currentPhrase.substring(0, charIndex));
+
+        return () => clearTimeout(typeTimeout);
+    }, [charIndex, isDeleting, phraseIndex]);
+
+    return (
+        <section id="home" className="hero">
+            <div className="hero-content">
+                <span className="hero-greeting">Hello, I'm</span>
+                <h1>Devraj Solanki</h1>
+                <p className="hero-subtitle">I'm a <span className="highlight">{displayText}</span><span className="cursor">|</span></p>
+                <p className="hero-description">
+                    "Passionate about building seamless digital experiences. I specialize in crafting high-performance, responsive frontend applications and am currently expanding my expertise into Full Stack development with the MERN stack. My goal is to build scalable web solutions that solve real-world problems."
+                </p>
+                <div className="cta-buttons">
+                    <a href="#portfolio-projects" className="btn btn-primary">
+                        <i className="fas fa-rocket"></i>
+                        Explore Projects
+                    </a>
+                    <a 
+                        href="https://drive.google.com/file/d/1iI0vQaeZtl3-SA4YWqsr3Um-9vRyRPzF/view?usp=sharing" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="btn btn-secondary"
+                    >
+                        <i className="fas fa-file-download"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Hero;
